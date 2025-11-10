@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel - Ladybug Hosting</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🔧 Admin Panel</h1>
+            <button onclick="logout()">Logout</button>
+        </header>
+
+        <div class="admin-panel">
+            <div class="panel-credentials">
+                <h2>SillyDev Panel Credentials</h2>
+                <div class="credentials-box">
+                    <p><strong>Panel URL:</strong> <span id="panel-url"></span></p>
+                    <p><strong>Username:</strong> <span id="panel-username"></span></p>
+                    <p><strong>Password:</strong> <span id="panel-password"></span></p>
+                    <button onclick="openPanel()">Open SillyDev Panel</button>
+                </div>
+            </div>
+
+            <div class="admin-section">
+                <h2>All Users</h2>
+                <div id="users-list"></div>
+            </div>
+
+            <div class="admin-section">
+                <h2>All Servers</h2>
+                <div id="admin-servers-list"></div>
+            </div>
+        </div>
+
+        <div id="message" class="message"></div>
+    </div>
+
+    <script src="/js/admin.js"></script>
+</body>
+</html>

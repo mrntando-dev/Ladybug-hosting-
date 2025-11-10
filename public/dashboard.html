@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Ladybug Hosting</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🐞 Ladybug Hosting Dashboard</h1>
+            <div class="user-info">
+                <span id="username"></span>
+                <span class="coins" id="coins">💰 0 Coins</span>
+                <button onclick="logout()">Logout</button>
+            </div>
+        </header>
+
+        <div class="dashboard">
+            <div class="create-server">
+                <h2>Create New Server</h2>
+                <form id="create-server-form">
+                    <input type="text" id="server-name" placeholder="Server Name" required>
+                    <select id="server-type" required>
+                        <option value="">Select Server Type</option>
+                        <option value="minecraft">Minecraft</option>
+                        <option value="nodejs">Node.js</option>
+                        <option value="python">Python</option>
+                        <option value="discord-bot">Discord Bot</option>
+                    </select>
+                    <button type="submit">Create Server (10 coins)</button>
+                </form>
+            </div>
+
+            <div class="servers">
+                <h2>My Servers</h2>
+                <div id="servers-list"></div>
+            </div>
+        </div>
+
+        <div id="message" class="message"></div>
+    </div>
+
+    <script src="/js/dashboard.js"></script>
+</body>
+</html>
