@@ -1,0 +1,27 @@
+services:
+  - type: web
+    name: ladybug-hosting
+    env: node
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: MONGODB_URI
+        sync: false
+      - key: JWT_SECRET
+        generateValue: true
+      - key: SILLY_PANEL_URL
+        value: https://client.sillydev.co.uk
+      - key: SILLY_PANEL_USERNAME
+        value: Ntando
+      - key: SILLY_PANEL_PASSWORD
+        value: Ntando
+      - key: ADMIN_USERNAME
+        value: Ntando
+      - key: ADMIN_PASSWORD
+        value: Ntando
+      - key: INITIAL_COINS
+        value: 100
+      - key: COINS_PER_HOUR
+        value: 1
